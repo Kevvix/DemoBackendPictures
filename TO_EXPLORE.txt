@@ -1,0 +1,2 @@
+https://github.com/filipw/Strathweb.CacheOutput => utile pour caching côté client (cache-control) et côté server (équivalent de OutputCache de MVC)
+
