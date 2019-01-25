@@ -1,157 +1,169 @@
 {
-	"info": {
-		"_postman_id": "8c1376a9-436d-42ac-83f9-3f978a192b46",
-		"name": "Demo",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
+	"id": "df955956-645c-4fe8-a1f0-38b15e8a2e0b",
+	"name": "Demo",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"4d965848-c4d9-4686-8f55-b73e507347eb",
+		"dca723a9-10e4-47cb-888c-5255e06c3d69",
+		"34fc190d-3a6c-4cd2-8f66-7de3d7f47d0d",
+		"7f48cb09-e415-43de-908e-790e851116cf",
+		"ca6d8b0e-88f4-4b07-8570-7b37b365c669"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
 		{
+			"id": "34fc190d-3a6c-4cd2-8f66-7de3d7f47d0d",
+			"name": "POST - http://localhost:50502/api/photosWithDatabaseStorageStrategy",
+			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy",
+			"description": null,
+			"data": [
+				{
+					"key": "file",
+					"type": "file",
+					"src": "",
+					"value": ""
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4d965848-c4d9-4686-8f55-b73e507347eb",
 			"name": "GET - http://localhost:50502/api/photosWithDatabaseStorageStrategy",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:50502/api/photosWithDatabaseStorageStrategy?id=16",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "50502",
-					"path": [
-						"api",
-						"photosWithDatabaseStorageStrategy"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "16"
-						}
-					]
+			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy?id=16",
+			"description": null,
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text"
 				}
-			},
-			"response": []
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "16"
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
 		},
 		{
+			"id": "7f48cb09-e415-43de-908e-790e851116cf",
+			"name": "POST - http://localhost:50502/api/photosWithNetworkStorageStrategy",
+			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy",
+			"description": null,
+			"data": [
+				{
+					"key": "file",
+					"type": "file",
+					"src": "",
+					"value": ""
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ca6d8b0e-88f4-4b07-8570-7b37b365c669",
+			"name": "GET - http://localhost:50502/api/photos",
+			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy?id=1",
+			"description": "",
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "dca723a9-10e4-47cb-888c-5255e06c3d69",
 			"name": "GET - http://localhost:50502/api/photosWithNetworkStorageStrategy?id=7",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {},
-				"url": {
-					"raw": "http://localhost:50502/api/photosWithNetworkStorageStrategy?id=7",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "50502",
-					"path": [
-						"api",
-						"photosWithNetworkStorageStrategy"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "7"
-						}
-					]
+			"url": "http://localhost:50502/api/photosWithNetworkStorageStrategy?id=7",
+			"description": null,
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"type": "text"
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST - http://localhost:50502/api/photosWithDatabaseStorageStrategy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"type": "file",
-							"src": ""
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:50502/api/photosWithDatabaseStorageStrategy",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "50502",
-					"path": [
-						"api",
-						"photosWithDatabaseStorageStrategy"
-					]
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "7"
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST - http://localhost:50502/api/photosWithDatabaseStorageStrategy",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"type": "file",
-							"src": ""
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:50502/api/photosWithDatabaseStorageStrategy",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "50502",
-					"path": [
-						"api",
-						"photosWithDatabaseStorageStrategy"
-					]
-				}
-			},
-			"response": []
+			],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
 		}
 	]
 }
