@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -8,11 +7,12 @@ using System.Web;
 using System.Web.Http;
 using Demo.Backend.Pictures.Models;
 using System.Collections.Generic;
-using WebApi.OutputCache.V2;
 
 namespace Demo.Backend.Pictures.Controllers
 {
-
+    /// <summary>
+    /// Version du contrôleur utilisant un système de stockage dans la BD
+    /// </summary>
     public class PhotosWithDatabaseStorageStrategyController : ApiController
     {
         [HttpPost]
@@ -50,12 +50,14 @@ namespace Demo.Backend.Pictures.Controllers
         }
             
         [HttpGet]
-        [CacheOutput(ClientTimeSpan = 20, ServerTimeSpan = 20)]
         public HttpResponseMessage GetPhoto(int id)
         {
             using (var entities = new Entities())
             {
                 var photo = entities.Photos.Find(id);
+                if(photo == null) {
+                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Image non-trouvée");
+                }
                 var photoWithDatabaseStorageStrategy = (PhotoWithDatabaseStorageStrategy)photo;
                 HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
                 result.Content = new ByteArrayContent(photoWithDatabaseStorageStrategy.Content);
@@ -66,6 +68,6 @@ namespace Demo.Backend.Pictures.Controllers
                 return result;
             }
         }
-        
+
     }
 }

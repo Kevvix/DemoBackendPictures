@@ -148,6 +148,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HttpContextExtensionMethod.cs" />
+    <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Controllers\PhotosWithDatabaseStorageStrategyController.cs" />
     <Compile Include="Controllers\PhotosWithNetworkStorageStrategyController.cs" />
     <Compile Include="Controllers\ValidateFilesAttribute.cs" />
@@ -191,6 +192,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Views\Photos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,6 +11,9 @@ using System.Collections.Generic;
 namespace Demo.Backend.Pictures.Controllers
 {
 
+    /// <summary>
+    /// Version du contrôleur utilisant un système de stockage sur le réseau
+    /// </summary>
     public class PhotosWithNetworkStorageStrategyController : ApiController
     {
         [HttpPost]
@@ -46,6 +49,10 @@ namespace Demo.Backend.Pictures.Controllers
             using (var entities = new Entities())
             {
                 var photo = entities.Photos.Find(id);
+                if (photo == null)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Image non-trouvée");
+                }
                 var photoWithNetworkStorageStrategy = (PhotoWithNetworkStorageStrategy)photo;
                 var path = PathToStorageKey(photoWithNetworkStorageStrategy.StorageKey.ToString());
                 HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);

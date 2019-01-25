@@ -6,6 +6,9 @@ using System.Web.Http.Controllers;
 
 namespace Demo.Backend.Pictures.Controllers
 {
+    /// <summary>
+    /// ActionFilter personnalisé pour centraliser la logique de validation des fichiers (HttpFileCollection)
+    /// </summary>
     public class ValidateFilesAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(HttpActionContext actionContext)
