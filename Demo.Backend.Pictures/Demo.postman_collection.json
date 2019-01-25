@@ -22,19 +22,16 @@
 			"description": null,
 			"data": [
 				{
-					"key": "file",
+					"key": "zzzz",
 					"type": "file",
-					"src": "",
-					"value": ""
+					"src": ""
 				}
 			],
 			"dataMode": "params",
 			"headerData": [
 				{
 					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"type": "text"
+					"value": "application/x-www-form-urlencoded"
 				}
 			],
 			"method": "POST",
@@ -78,23 +75,20 @@
 		{
 			"id": "7f48cb09-e415-43de-908e-790e851116cf",
 			"name": "POST - http://localhost:50502/api/photosWithNetworkStorageStrategy",
-			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy",
+			"url": "http://localhost:50502/api/photosWithNetworkStorageStrategy",
 			"description": null,
 			"data": [
 				{
 					"key": "file",
 					"type": "file",
-					"src": "",
-					"value": ""
+					"src": ""
 				}
 			],
 			"dataMode": "params",
 			"headerData": [
 				{
 					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"type": "text"
+					"value": "application/x-www-form-urlencoded"
 				}
 			],
 			"method": "POST",
@@ -109,8 +103,30 @@
 		{
 			"id": "ca6d8b0e-88f4-4b07-8570-7b37b365c669",
 			"name": "GET - http://localhost:50502/api/photos",
-			"url": "http://localhost:50502/api/photosWithDatabaseStorageStrategy?id=1",
+			"url": "http://localhost:50502/api/photos",
 			"description": "",
+			"data": [],
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "dca723a9-10e4-47cb-888c-5255e06c3d69",
+			"name": "GET - http://localhost:50502/api/photosWithNetworkStorageStrategy",
+			"url": "http://localhost:50502/api/photosWithNetworkStorageStrategy?id=6",
+			"description": null,
 			"data": [],
 			"dataMode": null,
 			"headerData": [
@@ -124,39 +140,10 @@
 			"queryParams": [
 				{
 					"key": "id",
-					"value": "1",
+					"value": "6",
 					"equals": true,
 					"description": "",
 					"enabled": true
-				}
-			],
-			"auth": null,
-			"events": null,
-			"folder": null,
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
-			"pathVariables": {}
-		},
-		{
-			"id": "dca723a9-10e4-47cb-888c-5255e06c3d69",
-			"name": "GET - http://localhost:50502/api/photosWithNetworkStorageStrategy?id=7",
-			"url": "http://localhost:50502/api/photosWithNetworkStorageStrategy?id=7",
-			"description": null,
-			"data": [],
-			"dataMode": null,
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"name": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"type": "text"
-				}
-			],
-			"method": "GET",
-			"pathVariableData": [],
-			"queryParams": [
-				{
-					"key": "id",
-					"value": "7"
 				}
 			],
 			"auth": null,
