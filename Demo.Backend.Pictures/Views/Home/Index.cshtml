@@ -12,12 +12,20 @@
 </head>
 <body>
     <div>
-        <h1>I'm a backend tiger!</h1> 
-        <img src="http://localhost:50502/api/photosWithDatabaseStorageStrategy?id=1" height="300" />
-
-        <h2>
-            
-        </h2>
+        @if (@ViewBag.model == null)
+        {
+            <h1>Upload a picture first</h1>
+        }
+        else
+        {
+            <h1>The last picture uploaded</h1>
+            <h2>Max size : 100px</h2>
+            <img src="http://localhost:50502/api/@ViewBag.url/getPhotoUsingResizer/@ViewBag.model.Id/100" />
+            <h2>Max size : 200px</h2>
+            <img src="http://localhost:50502/api/@ViewBag.url/getPhotoUsingResizer/@ViewBag.model.Id/200" />
+            <h2>Original size</h2>
+            <img src="http://localhost:50502/api/@ViewBag.url/getPhoto/@ViewBag.model.Id" />
+        }
     </div>
 </body>
 </html>
